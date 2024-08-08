@@ -11,7 +11,7 @@ public class Main {
                 83, 5, 68, 1, 7, 64, 57, 24};
 
         //Виводимо початковий вигляд масиву
-        System.out.println("Початковий вигляд масиву: " + Arrays.toString(numbers));
+        System.out.println("\nПочатковий вигляд масиву: " + Arrays.toString(numbers));
 
         for (int i = 1; i < numbers.length; i++){
             int key = numbers[i]; //змінна-ключ, яку "беремо" для порівняння
@@ -27,7 +27,7 @@ public class Main {
 
         //Створюємо сканер, для отримання користувацього значення
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("\nВведіть число для пошуку: ");
+        System.out.println("\nВведіть число для пошуку: ");
         int dataSearch = scanner.nextInt();
 
         //Визначаємо змінними межі масиву
