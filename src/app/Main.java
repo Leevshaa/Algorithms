@@ -25,24 +25,26 @@ public class Main {
         }
         System.out.println("\nВідсортований масив: " + Arrays.toString(numbers));
 
+        //Створюємо сканер, для отримання користувацього значення
         Scanner scanner = new Scanner(System.in);
         System.out.printf("\nВведіть число для пошуку: ");
         int dataSearch = scanner.nextInt();
 
+        //Визначаємо змінними межі масиву
         int left = 0;
         int right = numbers.length - 1;
-        int index = -1;
+        int index = -1; //<-за замовчуванням вважаємо, що значення відсутнє в масиві
 
         while (left <= right){
-            int mid = right - left / 2;
+            int mid = right - left / 2; //<-знаходимо середину масиву
 
             if (numbers[mid] == dataSearch){
                 index = mid;
                 break;
             } else if (numbers[mid] > dataSearch){
-                right = mid - 1;
+                right = mid - 1; //якщо введене значення менше, ніж значення в середині масиву, то переміщуємо праву межу за середину - 1
             } else {
-                left = mid + 1;
+                left = mid + 1; //навпаки
             }
         }
         if (index == -1)
